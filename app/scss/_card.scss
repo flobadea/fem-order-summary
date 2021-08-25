@@ -1,0 +1,109 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: $paleBlue;
+    background-image: url("../../images/pattern-background-mobile.svg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    @include breakpoint-up('mobile'){
+        background-image: url("../../images/pattern-background-desktop.svg");
+    }
+}
+.card{
+    width: 450px;
+    align-self: center;
+    justify-self: center;
+    margin: 25px;
+
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: -5px 10px 15px 0px $paleBlue;
+
+    &__image{
+        border-radius: 10px 10px 0 0;
+        max-width: 100%;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 40px;
+        .title{
+            display: inline-block;
+            font-size: 26px;
+            font-weight: 900;
+            color: $darkBlue;
+            margin-bottom: 20px;
+        }
+        .description{
+            display: inline-block;
+            font-size: 16px;
+            color: $desaturatedBlue;
+            padding: 0 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .plan{
+            background-color: $veryPaleBlue;
+            border-radius: 10px;
+            display: flex;
+            align-self: stretch;
+            margin-bottom: 30px;
+            padding: 20px;
+            align-items: center;
+            > div{
+                flex-grow: 1;
+                padding-left: 20px;
+            }
+            &-name{
+                font-weight: 700;
+                padding-bottom: 5px;
+            }
+            &-price{
+                color: $desaturatedBlue;
+                font-size: 15px;
+            }
+            .link{
+                font-size: 14px;
+                font-weight: 700;
+                color: $brightBlue;
+                transition: opacity 150ms ease-in-out;
+                &:hover{
+                    opacity: 0.8;
+                    text-decoration: none;
+                }
+            }
+        }
+        .btn-alternate{
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            color: $desaturatedBlue;
+            font-weight: 700;
+            transition: color 150ms ease-in-out;
+            &:hover{
+                color: $darkBlue;
+            }
+        }
+        .btn-primary{
+            text-decoration: none;
+            text-align: center;
+            color: $white;
+            font-weight: 700;
+            background-color: $brightBlue;
+            padding: 12px;
+            width: 100%;
+            border-radius: 10px;      
+            margin-bottom: 20px;      
+            box-shadow: 0px 10px 8px 4px $paleBlue;
+            transition: opacity 150ms ease-in-out;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+    
+}
